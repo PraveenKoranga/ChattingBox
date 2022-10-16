@@ -5,6 +5,8 @@ const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  
+  console.log("auth")
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -15,7 +17,7 @@ const LoginForm = () => {
       "User-Secret": password,
     };
     
-    console.log("auth",authObject)
+    
 
     try {
       await axios.get("https://api.chatengine.io/chats", {
