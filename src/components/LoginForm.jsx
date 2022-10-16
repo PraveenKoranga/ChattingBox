@@ -14,6 +14,8 @@ const LoginForm = () => {
       "User-Name": username,
       "User-Secret": password,
     };
+    
+    console.log("auth",authObject)
 
     try {
       await axios.get("https://api.chatengine.io/chats", {
